@@ -10,22 +10,19 @@ func newDeck() deck {
 	cards := deck{}
 	cardSuits := []string{"Spades", "Hearts", "Diamonds", "Clubs"}
 	cardValues := []string{"Ace", "2", "3", "4"}
-	//	var str strings.Builder
 
 	for _, suite := range cardSuits {
 		for _, value := range cardValues {
-			// str.WriteString(value)
-			// str.WriteString(" of ")
-			// str.WriteString(suite)
-
-			//cards = append(cards, str.String)
-
 			cards = append(cards, value+" of "+suite)
 
 		}
 	}
 
 	return cards
+}
+
+func deal(d deck, handSize int) (deck, deck) {
+	return d[:handSize], d[handSize:]
 }
 
 func (d deck) print() {
