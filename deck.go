@@ -13,7 +13,7 @@ type deck []string
 
 func newDeck() deck {
 	cards := deck{}
-	cardSuits := []string{"Spades", "Hearts", "Diamonds", "Clubs"}
+	cardSuits := []string{"Spades", "Diamonds", "Hearts", "Clubs"}
 	cardValues := []string{"Ace", "2", "3", "4"}
 
 	for _, suite := range cardSuits {
