@@ -1,5 +1,9 @@
 package main
 
+import (
+	"fmt"
+)
+
 func main() {
 
 	//cards := newDeck()
@@ -16,5 +20,8 @@ func main() {
 	//cards.saveToFile("cards.txt")
 
 	deck := newDeckFromFile("cards.txt")
+	deck.print()
+	fmt.Println("about to shuffle...")
+	deck.shuffle()
 	deck.print()
 }
