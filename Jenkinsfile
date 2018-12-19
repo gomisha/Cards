@@ -10,7 +10,7 @@ pipeline {
       steps {
         echo 'testing...'
         withSonarQubeEnv ('SonarQube') {
-          sh 'mvn clean package sonar:sonar'
+          sh "/opt/sonar-scanner/bin/sonar-scanner -D sonar-project.properties"
         }
         echo 'really finished testing2'
       }
