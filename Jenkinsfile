@@ -19,6 +19,11 @@ pipeline {
             waitForQualityGate true
           }
         }
+        stage('') {
+          steps {
+            echo 'Finishing testing...'
+          }
+        }
       }
     }
     stage('Deployment') {
