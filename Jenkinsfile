@@ -10,7 +10,7 @@ pipeline {
       steps {
         echo 'testing...'
         withSonarQubeEnv ('SonarQube') {
-          sh "/opt/sonar-scanner/bin/sonar-scanner -D sonar-project.properties"
+          sh '${scannerHome}/bin/sonar-scanner'
         }
         echo 'really finished testing2'
       }
