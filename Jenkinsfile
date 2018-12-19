@@ -10,7 +10,7 @@ pipeline {
       steps {
         echo 'testing...'
         withSonarQubeEnv 'SonarQube'
-        echo 'reallyl finished testing'
+        echo 'really finished testing2'
       }
     }
     stage('Deployment') {
