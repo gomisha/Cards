@@ -7,23 +7,9 @@ pipeline {
       }
     }
     stage('Test') {
-      parallel {
-        stage('Test') {
-          steps {
-            echo 'testing...'
-          }
-        }
-        stage('SonarQube') {
-          steps {
-            withSonarQubeEnv 'SonarQube'
-            waitForQualityGate true
-          }
-        }
-        stage('') {
-          steps {
-            echo 'Finishing testing...'
-          }
-        }
+      steps {
+        echo 'testing...'
+        echo 'reallyl finished testing'
       }
     }
     stage('Deployment') {
