@@ -9,7 +9,9 @@ pipeline {
     stage('Test') {
       steps {
         echo 'testing...'
-        withSonarQubeEnv 'SonarQube'
+        withSonarQubeEnv ('SonarQube') {
+          sonar-scanner
+        }
         echo 'really finished testing2'
       }
     }
