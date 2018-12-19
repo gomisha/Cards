@@ -10,7 +10,7 @@ pipeline {
       steps {
         echo 'testing...'
         withSonarQubeEnv ('SonarQube') {
-          sh '${scannerHome}/bin/sonar-scanner'
+          sh '/var/jenkins_home/sonar-scanner/sonar-scanner-3.2.0.1227-linux/bin/sonar-scanner'
         }
         echo 'really finished testing2'
       }
