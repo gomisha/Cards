@@ -9,6 +9,7 @@ pipeline {
     stage('Test') {
       steps {
         echo 'testing...'
+        withSonarQubeEnv 'SonarQube'
         echo 'reallyl finished testing'
       }
     }
