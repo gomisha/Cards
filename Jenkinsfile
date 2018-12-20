@@ -15,6 +15,13 @@ pipeline {
         echo 'really finished testing2'
       }
     }
+    stage("Quality Gate") {
+        steps {
+            timeout(time: 1, unit: 'HOURS') {
+              waitForQualityGate abortPipeline: true
+            }
+        }
+    }
     stage('Deployment') {
       steps {
         echo 'deploying...'
